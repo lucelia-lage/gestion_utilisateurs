@@ -65,15 +65,15 @@ if (isset($_POST['updateUser'])) {
 
 <body>
     <h1>Modifier un utilisateur</h1>
-
+<div class = "formContainer">
     <form action="modif.php?id=<?= $id ?>" method="POST">
         <input type="text" name="firstName" placeholder="Prénom" value="<?= $user['firstName'] ?>"><br>
         <input type="text" name="lastName" placeholder="Nom" value="<?= $user['lastName'] ?>"><br>
         <input type="email" name="mail" placeholder="Email" value="<?= $user['mail'] ?>"><br>
         <input type="text" name="zipCode" placeholder="Code postal" value="<?= $user['zipCode'] ?>"><br>
-        <button type="submit" name="updateUser">Enregistrer</button>
+        <button type="submit" name="updateUser">Sauvegarder</button>
     </form>
-
+</div>
     <p><a href="index.php">Retourner à la liste</a></p>
 </body>
 
