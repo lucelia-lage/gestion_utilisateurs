@@ -1,0 +1,63 @@
+body {
+    background-color: #fdf6e3;
+    color: #333;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2rem;
+    display: inline-block;
+}
+
+h2 {
+    background-color: #eee;
+    padding: 5px 10px;
+    margin-top: 30px;
+    font-size: 1.2rem;
+}
+
+form {
+    margin-top: 10px;
+}
+
+input, button {
+    font-family: inherit;
+    background-color: #fafafa;
+    border: 1px solid #aaa;
+    border-radius: 2px;
+}
+
+button {
+    background-color: #ddd;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ccc;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+}
+
+th, td {
+    padding: 8px 12px;
+    border: 1px solid #999;
+    text-align: left;
+}
+
+th {
+    background-color: #eee;
+    font-weight: bold;
+}
+
+a {
+    color: #005;
+}
+
+a:hover {
+    color: #00a;
+}
