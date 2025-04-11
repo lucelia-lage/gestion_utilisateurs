@@ -10,7 +10,9 @@ $id = intval($_GET['id']);
 try {
     $selectUser = $db->prepare("SELECT * FROM user WHERE id = :id"); // on prépare notre requête
 
-    $selectUser->bindParam(':id', $id);
+    $selectUser->bindParam(':id', $id); // La méthode bindParam() va lier un paramètre à un nom de variable 
+    // spécifique et la variable va être liée en tant que référence et ne 
+    // sera évaluée qu’au moment de l’appel à la méthode execute().: https://www.pierre-giraud.com/php-mysql-apprendre-coder-cours/requete-preparee/ 
 
     $selectUser->execute(); // on exécute la requête
 

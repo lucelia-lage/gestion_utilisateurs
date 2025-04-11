@@ -18,8 +18,8 @@
     <form action="index.php" method="POST">
         <input type="text" name="firstName" placeholder="Prénom"><br>
         <input type="text" name="lastName" placeholder="Nom"><br>
-        <input type="email" name="mail" placeholder="mail"><br>
-        <input type="text" name="zipCode" placeholder="zipCode"><br>
+        <input type="email" name="mail" placeholder="Adresse mail"><br>
+        <input type="text" name="zipCode" placeholder="Code Postal"><br>
         <button type="submit" name="addUser">Ajouter</button>
     </form>
 
@@ -33,7 +33,7 @@
             <th>Actions</th>
         </tr>
         <?php
-        foreach ($users as $entry) { // on parcout tous les résuoltats 
+        foreach ($users as $entry) { // on parcout tous les résultats 
             echo "<tr>";
             echo "<td>" . ($entry['firstName']) . "</td>";
             echo "<td>" . ($entry['lastName']) . "</td>";

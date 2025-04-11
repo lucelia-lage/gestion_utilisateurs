@@ -3,11 +3,13 @@ body {
     color: #333;
     font-family: 'Courier New', Courier, monospace;
     padding: 20px;
+    text-align: center;
 }
 
 h1 {
     font-size: 2rem;
     display: inline-block;
+    
 }
 
 h2 {
@@ -24,8 +26,10 @@ form {
 input, button {
     font-family: inherit;
     background-color: #fafafa;
-    border: 1px solid #aaa;
-    border-radius: 2px;
+    border: 3px solid #aaa;
+    border-radius: 10px;
+    padding: 0.5%;
+    margin: 0.2%;
 }
 
 button {
@@ -44,9 +48,9 @@ table {
 }
 
 th, td {
-    padding: 8px 12px;
-    border: 1px solid #999;
-    text-align: left;
+    padding: 10px 16px;
+    border: 3px solid #999;
+    text-align: center;
 }
 
 th {
@@ -55,7 +59,7 @@ th {
 }
 
 a {
-    color: #005;
+    color: rgb(143, 143, 205);
 }
 
 a:hover {
