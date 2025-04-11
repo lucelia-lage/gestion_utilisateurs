@@ -13,7 +13,7 @@
 
 <body>
     <h1>Gestion d'utilisateurs</h1>
-
+<div class= "formContainer">
     <h2>Nouvel utilisateur</h2>
     <form action="index.php" method="POST">
         <input type="text" name="firstName" placeholder="Prénom"><br>
@@ -22,15 +22,15 @@
         <input type="text" name="zipCode" placeholder="Code Postal"><br>
         <button type="submit" name="addUser">Ajouter</button>
     </form>
-
+</div>
     <h2>Utilisateurs enregistrés</h2>
     <table>
         <tr>
             <th>Prénom</th>
             <th>Nom</th>
-            <th>Mail</th>
+            <th>Adresse-mail</th>
             <th>Code postal</th>
-            <th>Actions</th>
+            <th></th>
         </tr>
         <?php
         foreach ($users as $entry) { // on parcout tous les résultats 
