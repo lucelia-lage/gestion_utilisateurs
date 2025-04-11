@@ -10,9 +10,11 @@
 
     <title>Projet Final SQL / PHP</title>
 </head>
-
+<header>
+    <img src="./images/gestion_utilisateurs_logo.png" alt="logo">
+</header>
 <body>
-    <h1>Gestion d'utilisateurs</h1>
+    <!-- <h1>Gestion d'utilisateurs</h1> -->
 <div class= "formContainer">
     <h2>Nouvel utilisateur</h2>
     <form action="index.php" method="POST">
@@ -56,15 +58,15 @@
         $zipCode = $_POST['zipCode'];
 
         try {
-            $db -> beginTransaction(); // on active la vérification 
+            $db->beginTransaction(); // on active la vérification 
             $insertUser = $db->prepare("INSERT INTO user (firstName, lastName, mail, zipCode) VALUES (:firstName, :lastName, :mail, :zipCode)"); // on prépare notre requête 
             
-            $insertUser -> bindParam(':firstName', $firstName);
-            $insertUser -> bindParam(':lastName', $lastName);
-            $insertUser -> bindParam(':mail', $mail);
-            $insertUser -> bindParam(':zipCode', $zipCode);
+            $insertUser->bindParam(':firstName', $firstName);
+            $insertUser->bindParam(':lastName', $lastName);
+            $insertUser->bindParam(':mail', $mail);
+            $insertUser->bindParam(':zipCode', $zipCode);
 
-            $insertUser -> execute(); // on exécute la requête
+            $insertUser->execute(); // on exécute la requête
 
             $db->commit(); // tout s'est bien passé ? alors on valide la transaction
             header("Location: index.php");
@@ -78,12 +80,12 @@
     if (isset($_GET['delete'])) {
         $id = $_GET['delete'];
         try {
-            $db -> beginTransaction(); // on active la vérification 
+            $db->beginTransaction(); // on active la vérification 
             $deleteUser = $db->prepare("DELETE FROM user WHERE id = :id"); // on prépare notre requête
             
-            $deleteUser -> bindParam(':id', $id);
+            $deleteUser->bindParam(':id', $id);
 
-            $deleteUser -> execute(); 
+            $deleteUser->execute(); 
 
             $db->commit(); // tout s'est bien passé ? alors on valide la transaction
             header("Location: index.php");
